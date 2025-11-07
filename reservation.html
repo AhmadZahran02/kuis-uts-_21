@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservasi Meja - Kafe Aroma Senja</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <section id="reservation-info">
+    <h2>Reservasi Meja</h2>
+    <p>
+      Kafe Aroma Senja menyediakan layanan reservasi meja untuk memastikan kenyamanan Anda menikmati suasana santai kami tanpa perlu menunggu. 
+      Reservasi dapat dilakukan secara online melalui formulir di bawah ini, atau langsung melalui telepon dan WhatsApp kami.
+    </p>
+    <p>
+      Harap melakukan reservasi minimal satu hari sebelum kedatangan, terutama untuk akhir pekan atau acara khusus.
+      Tim kami akan segera mengonfirmasi ketersediaan meja Anda.
+    </p>
+
+    <ul>
+      <li>Reservasi hanya berlaku setelah konfirmasi dari pihak kafe.</li>
+      <li>Maksimal toleransi keterlambatan adalah 15 menit dari waktu yang dipesan.</li>
+      <li>Pembatalan dapat dilakukan maksimal 3 jam sebelum waktu kedatangan.</li>
+      <li>Reservasi untuk lebih dari 10 orang harap dilakukan melalui kontak langsung.</li>
+      <li>Khusus ruangan privat memerlukan minimal pemesanan 4 orang.</li>
+    </ul>
+  </section>
+
+  <section id="reservation-form">
+    <h2>Formulir Reservasi</h2>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Informasi Pribadi</legend>
+
+        <label for="name">Nama Lengkap:</label><br>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="contoh: nama@email.com" required><br><br>
+
+        <label for="phone">No. Telepon:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="contoh: 0812-3456-7890" pattern="[0-9]{10,15}" required><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Detail Reservasi</legend>
+
+        <label for="date">Tanggal:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Waktu:</label><br>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="people">Jumlah Orang:</label><br>
+        <select id="people" name="people" required>
+          <option value="">Pilih jumlah orang</option>
+          <option value="1">1 orang</option>
+          <option value="2">2 orang</option>
+          <option value="3">3 orang</option>
+          <option value="4">4 orang</option>
+          <option value="5">5 orang</option>
+          <option value="6">6 orang</option>
+          <option value="7">7 orang</option>
+          <option value="8">8 orang</option>
+          <option value="9">9 orang</option>
+          <option value="10">10 orang</option>
+        </select><br><br>
+
+        <label for="table-type">Tipe Meja:</label><br>
+        <select id="table-type" name="table-type" required>
+          <option value="">Pilih tipe meja</option>
+          <option value="regular">Regular</option>
+          <option value="window">Window Seat</option>
+          <option value="private">Private Room</option>
+        </select><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informasi Tambahan</legend>
+
+        <label for="notes">Catatan Khusus:</label><br>
+        <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Contoh: Permintaan meja dekat jendela, ulang tahun, dll."></textarea><br><br>
+
+        <label>
+          <input type="checkbox" name="agreement" required>
+          Saya telah membaca dan menyetujui syarat & ketentuan reservasi.
+        </label><br><br>
+
+        <button type="submit">Kirim Reservasi</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <aside id="contact-alternative">
+    <h3>Alternatif Kontak Reservasi</h3>
+    <p>
+      Jika Anda mengalami kesulitan mengisi formulir, Anda dapat melakukan reservasi langsung melalui:
+    </p>
+    <p>
+      📞 <strong>Telepon:</strong> (021) 555-1234<br>
+      💬 <strong>WhatsApp:</strong> +62 812-3456-7890<br>
+      ✉️ <strong>Email:</strong> reservasi@kafearomasenja.com
+    </p>
+    <p>
+      Tim kami siap melayani Anda setiap hari pukul <strong>08.00 - 22.00</strong>.
+    </p>
+  </aside>
+
+</body>
+</html>
