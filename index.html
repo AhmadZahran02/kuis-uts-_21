@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kopi Santai - Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Santai - Nikmati Setiap Tegukan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <header class="main-header">
+        <div class="logo-container">
+            <h1>Kopi Santai</h1>
+            <p class="tagline">Nikmati Setiap Tegukan</p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Navigasi -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Kopi Santai</h1>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Reservation</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>Selamat Datang di Kopi Santai</h2>
+                <p>Tempat Terbaik untuk Bersantai dengan Secangkir Kopi</p>
+                <div class="cta-buttons">
+                    <a href="menu.html" class="btn btn-primary">Lihat Menu</a>
+                    <a href="reservation.html" class="btn btn-secondary">Reservasi Sekarang</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Selamat Datang di Kopi Santai</h2>
-      <p>Tempat terbaik menikmati kopi dan waktu santai Anda.</p>
-      <a href="menu.html" class="btn">Lihat Menu</a>
-    </div>
-  </section>
+        <section id="featured-menu" class="content-section">
+            <h3>Menu Favorit Kami</h3>
+            <div class="menu-cards-grid">
+                <article class="menu-card">
+                    <img src="images/featured-espresso.jpg" alt="Espresso" loading="lazy">
+                    <h4>Espresso Signature</h4>
+                    <span class="price">Rp 25.000</span>
+                    <p>Shot espresso terbaik dengan biji kopi premium.</p>
+                </article>
 
-  <!-- Menu Favorit -->
-  <section class="menu-favorit">
-    <h2>Menu Favorit</h2>
-    <div class="menu-container">
-      <div class="menu-card">
-        <img src="images/espresso.jpg" alt="Espresso">
-        <h3>Espresso</h3>
-        <p>Kopi hitam pekat dan nikmat.</p>
-      </div>
+                <article class="menu-card">
+                    <img src="images/featured-cake.jpg" alt="Red Velvet Cake" loading="lazy">
+                    <h4>Red Velvet Cake</h4>
+                    <span class="price">Rp 35.000</span>
+                    <p>Kue lembut dengan cream cheese frosting.</p>
+                </article>
 
-      <div class="menu-card">
-        <img src="images/cappuccino.jpg" alt="Cappuccino">
-        <h3>Cappuccino</h3>
-        <p>Kopi susu dengan busa lembut.</p>
-      </div>
+                <article class="menu-card">
+                    <img src="images/featured-sandwich.jpg" alt="Chicken Sandwich" loading="lazy">
+                    <h4>Chicken Club Sandwich</h4>
+                    <span class="price">Rp 45.000</span>
+                    <p>Roti panggang dengan isian ayam, telur, dan sayuran.</p>
+                </article>
+                
+                <article class="menu-card">
+                    <mark class="badge best-seller">Best Seller</mark>
+                    <img src="images/featured-matcha.jpg" alt="Iced Matcha Latte" loading="lazy">
+                    <h4>Iced Matcha Latte</h4>
+                    <span class="price">Rp 30.000</span>
+                    <p>Minuman matcha otentik dengan susu creamy.</p>
+                </article>
+            </div>
+        </section>
 
-      <div class="menu-card">
-        <img src="images/latte.jpg" alt="Latte">
-        <h3>Latte</h3>
-        <p>Campuran espresso dan susu lembut.</p>
-      </div>
-    </div>
-  </section>
+        <section id="why-us" class="content-section grey-bg">
+            <h3>Mengapa Memilih Kami?</h3>
+            <div class="choose-us-grid">
+                <article class="advantage-item">
+                    
+                    <h4>Biji Kopi Premium</h4>
+                    <p>Hanya menggunakan 100% Arabika lokal terbaik.</p>
+                </article>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Kopi Santai. Semua Hak Dilindungi.</p>
-  </footer>
+                <article class="advantage-item">
+                    
+                    <h4>Suasana Nyaman</h4>
+                    <p>Desain interior minimalis, ideal untuk bekerja.</p>
+                </article>
+                
+                <article class="advantage-item">
+                    
+                    <h4>WiFi Gratis</h4>
+                    <p>Akses internet super cepat dan stop kontak.</p>
+                </article>
+            </div>
+        </section>
 
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h4>Hubungi Kami</h4>
+                <address>
+                    Jl. Kopi Sejati No. 12, Jakarta Selatan<br>
+                    Phone: (021) 1234 5678<br>
+                    Email: halo@kopisantai.com
+                </address>
+            </div>
+            <div class="hours">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 08:00 - 22:00</p>
+                <p>Sabtu - Minggu: 09:00 - 23:00</p>
+            </div>
+            <div class="social-links">
+                <h4>Ikuti Kami</h4>
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Kopi Santai. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

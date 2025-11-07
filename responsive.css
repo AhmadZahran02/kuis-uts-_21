@@ -1,29 +1,23 @@
-/* Responsif sederhana */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero {
-    height: 60vh;
-  }
-
-  .hero-text h2 {
-    font-size: 20px;
-  }
-
-  .menu-container {
-    grid-template-columns: 1fr 1fr;
-  }
+@media (min-width: 768px) {
+    /* TABLET: 2 kolom untuk menu */
+    .menu-cards-grid,
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 480px) {
-  .menu-container {
-    grid-template-columns: 1fr;
-  }
+@media (min-width: 1024px) {
+    /* DESKTOP: 3-4 kolom */
+    .menu-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
-  .hero {
-    height: 50vh;
-  }
+    /* Why Choose Us rapi 3 kolom */
+    .choose-us-grid {
+        justify-content: space-between;
+    }
 }

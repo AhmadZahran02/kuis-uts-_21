@@ -1,113 +1,202 @@
-/* Warna dasar dan font */
+/* Warna standar proyek */
+:root {
+    --primary-color: #4A2C2A; /* Cokelat Kopi */
+    --secondary-color: #EFEBE9; /* Krem Latar */
+    --accent-color: #F4D35E; /* Kuning Aksen */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out; /* Transisi sederhana */
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--secondary-color);
 }
 
-/* Navigasi */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222;
-  padding: 15px 30px;
+.content-section {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grey-bg {
+    background-color: #f7f7f7;
 }
 
-.navbar .logo {
-  font-size: 20px;
-  font-weight: bold;
+/* NAVIGATION (Flexbox Wajib) */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 5%;
+    display: flex; /* WAJIB FLEXBOX */
+    justify-content: space-between;
+    align-items: center;
+}
+.main-nav ul {
+    display: flex; /* WAJIB FLEXBOX */
+    list-style: none;
+    gap: 25px;
+}
+.main-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 5px 0;
+}
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent-color);
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* HERO SECTION (Latar Minimal) */
+.hero-section {
+    height: 400px;
+    /* Ganti URL gambar */
+    background: url('../images/hero-bg.jpg') center/cover no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    position: relative;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+    z-index: 10;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #fff;
-  padding: 6px 10px;
+/* BUTTONS */
+.cta-buttons {
+    display: flex; /* WAJIB FLEXBOX */
+    gap: 15px;
+    justify-content: center;
 }
-
-.navbar a.active,
-.navbar a:hover {
-  background-color: #444;
-  border-radius: 4px;
-}
-
-/* Hero */
-.hero {
-  background: url('../images/hero-coffee.jpg') center/cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-text {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-radius: 8px;
-}
-
 .btn {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: #f4b400;
-  color: #000;
-  padding: 10px 18px;
-  border-radius: 6px;
-  text-decoration: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+.btn-primary:hover {
+    opacity: 0.8;
 }
 
-.btn:hover {
-  background-color: #ffd966;
+/* MENU GRID (CSS Grid Wajib) */
+.menu-cards-grid,
+.menu-grid {
+    display: grid; /* WAJIB GRID */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
-/* Menu Favorit & Menu Page */
-.menu-favorit, .menu-page {
-  padding: 40px 20px;
-  text-align: center;
+/* CARD STYLING (Bayangan Sederhana) */
+.menu-card,
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+.menu-card:hover,
+.menu-item:hover {
+    transform: translateY(-5px); /* Hover sederhana */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+.menu-card img,
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E74C3C;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7em;
 }
 
-.menu-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 25px;
+/* WHY CHOOSE US (Flexbox Wajib) */
+.choose-us-grid {
+    display: flex; /* WAJIB FLEXBOX */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+.advantage-item {
+    flex-basis: 300px;
+    padding: 15px;
 }
 
-.menu-card {
-  background-color: #1c1c1c;
-  padding: 15px;
-  border-radius: 8px;
+/* MENU FILTER */
+.menu-categories-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    padding: 8px 15px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 20px;
+}
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
 }
 
-.menu-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
+/* FOOTER (Anggota 2) */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 30px 5%;
+    text-align: center;
 }
-
-.menu-card h3 {
-  margin: 10px 0 5px;
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-
-.menu-card p {
-  color: #ccc;
-  font-size: 14px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #222;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 14px;
+.main-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
